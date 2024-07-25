@@ -142,8 +142,8 @@ html {
   scroll-behavior: smooth;
 }
 
-header .header-div {
-  max-width: 1100px;
+.sec-4 .sec-4-div .container, .sec-3 .sec-3-div .container, .sec-2 div, .sec-1 .banner-sec, .breadcrumbs, header .header-div {
+  max-width: 1110px;
   width: 100%;
   margin: 0 auto;
 }
@@ -204,4 +204,231 @@ header .header-div .header-buttons button {
 }
 header .header-div .header-buttons button:hover {
   color: #3295ce;
+}
+
+body {
+  background-color: #f9fafa;
+}
+
+.breadcrumbs {
+  display: flex;
+  margin-top: 80px;
+  font-size: 12px;
+  height: 68px;
+  align-items: center;
+}
+
+.sec-1 .banner-sec {
+  margin-top: 32px;
+  margin-bottom: 32px;
+  background-color: black;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("/TBC-Concept/images/banner-1.webp");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 376px;
+  border-radius: 6px;
+  color: white;
+  padding: 95px;
+}
+.sec-1 .banner-sec .banner-inner {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: nowrap;
+  max-width: 540px;
+  height: 186px;
+}
+.sec-1 .banner-sec .banner-inner h1 {
+  font-size: 28px;
+  line-height: 1.5;
+  font-weight: 700;
+}
+.sec-1 .banner-sec .banner-inner p {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+}
+.sec-1 .banner-sec .banner-inner svg {
+  fill: white;
+  margin-right: 8px;
+}
+.sec-1 .banner-sec .banner-inner button {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1.33;
+  width: 151px;
+  height: 50px;
+  border: none;
+  color: white;
+  border-radius: 4px;
+  background-image: linear-gradient(15deg, #001682, #3240e5, #3295ce, #3295ce);
+  background-size: 400%;
+  background-position: left;
+  transition: 0.25s background-position ease-in-out;
+}
+.sec-1 .banner-sec .banner-inner button:hover {
+  background-position: right;
+}
+
+.sec-2 div {
+  height: 228px;
+  padding: 60px 0;
+}
+.sec-2 div p {
+  font-size: 36px;
+  color: #141719;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+.sec-3 .sec-3-div {
+  height: 734px;
+  padding: 60px 0;
+}
+.sec-3 .sec-3-div .container {
+  height: 614px;
+}
+.sec-3 .sec-3-div .container .heading-wrapper {
+  height: 36px;
+  margin-bottom: 36px;
+}
+.sec-3 .sec-3-div .container .heading-wrapper h2 {
+  color: #141719;
+  font-size: 24px;
+  font-weight: 700;
+}
+.sec-3 .sec-3-div .container .box {
+  height: 542px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 30px;
+}
+.sec-3 .sec-3-div .container .box .left-side {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: stretch;
+  flex-wrap: nowrap;
+  height: 542px;
+  width: 540px;
+}
+.sec-3 .sec-3-div .container .box .left-side .parent {
+  height: 256px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+.sec-3 .sec-3-div .container .box .left-side .small-card-1,
+.sec-3 .sec-3-div .container .box .left-side .small-card-2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  flex-wrap: nowrap;
+  height: 256px;
+  border-radius: 8px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  padding: 40px;
+  transition: all 0.3s;
+}
+.sec-3 .sec-3-div .container .box .left-side .small-card-1:hover,
+.sec-3 .sec-3-div .container .box .left-side .small-card-2:hover {
+  transform: scale(1.02);
+}
+.sec-3 .sec-3-div .container .box .left-side .small-card-1 {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("/TBC-Concept/images/first.png");
+}
+.sec-3 .sec-3-div .container .box .left-side .small-card-2 {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("/TBC-Concept/images/second.png");
+}
+.sec-3 .sec-3-div .container .box .right-side {
+  height: 542px;
+  width: 540px;
+}
+.sec-3 .sec-3-div .container .box .right-side .parent-b {
+  height: 542px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+.sec-3 .sec-3-div .container .box .right-side .big-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  flex-wrap: nowrap;
+  height: 542px;
+  padding: 40px;
+  border-radius: 8px;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("/TBC-Concept/images/third.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  transition: all 0.3s;
+}
+.sec-3 .sec-3-div .container .box .right-side .big-card:hover {
+  transform: scale(1.02);
+}
+
+.card-content {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  color: white;
+}
+.card-content a {
+  text-decoration: underline;
+  font-size: 14px;
+}
+.card-content a svg {
+  margin-right: 4px;
+}
+.card-content h3 {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.sec-4 .sec-4-div {
+  height: 300px;
+  padding: 60px 0;
+}
+.sec-4 .sec-4-div .container {
+  height: 180px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: nowrap;
+}
+.sec-4 .sec-4-div .container .numb-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-start;
+  flex-wrap: nowrap;
+  width: 31.5%;
+  height: 180px;
+  padding: 40px 48px;
+  background-color: #fff;
+  border-radius: 8px;
+}
+.sec-4 .sec-4-div .container .numb-card .number {
+  font-size: 44px;
+  font-weight: 700;
+}
+.sec-4 .sec-4-div .container .numb-card p {
+  font-size: 16px;
+  color: #555f62;
 }/*# sourceMappingURL=global.css.map */

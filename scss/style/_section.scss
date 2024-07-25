@@ -1,0 +1,228 @@
+body {
+  background-color: #f9fafa;
+}
+.breadcrumbs {
+  @extend %mycontainer;
+  display: flex;
+  margin-top: 80px;
+  font-size: 12px;
+  height: 68px;
+  align-items: center;
+}
+//first section
+
+.sec-1 {
+  .banner-sec {
+    @extend %mycontainer;
+    margin-top: 32px;
+    margin-bottom: 32px;
+    background-color: black;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+      url("/TBC-Concept/images/banner-1.webp");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 376px;
+    border-radius: 6px;
+    color: white;
+    padding: 95px;
+    .banner-inner {
+      @include flex(column, space-between, flex-start, nowrap);
+      max-width: 540px;
+      height: 186px;
+      h1 {
+        font-size: 28px;
+        line-height: 1.5;
+        font-weight: 700;
+      }
+      p {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 1.5;
+      }
+      svg {
+        fill: white;
+        margin-right: 8px;
+      }
+      button {
+        @include flex(row, center, center, nowrap);
+        cursor: pointer;
+        font-size: 12px;
+        font-weight: 700;
+        line-height: 1.33;
+        width: 151px;
+        height: 50px;
+        border: none;
+        color: white;
+        border-radius: 4px;
+        background-image: linear-gradient(
+          15deg,
+          #001682,
+          #3240e5,
+          #3295ce,
+          #3295ce
+        );
+        background-size: 400%;
+        background-position: left;
+        transition: 0.25s background-position ease-in-out;
+      }
+      button:hover {
+        background-position: right;
+      }
+    }
+  }
+}
+
+.sec-2 {
+  div {
+    @extend %mycontainer;
+    height: 228px;
+    padding: 60px 0;
+    p {
+      font-size: 36px;
+      color: #141719;
+      font-weight: 400;
+      line-height: 1.5;
+    }
+  }
+}
+
+.sec-3 {
+  .sec-3-div {
+    height: 734px;
+    padding: 60px 0;
+    .container {
+      @extend %mycontainer;
+      height: 614px;
+      .heading-wrapper {
+        height: 36px;
+        margin-bottom: 36px;
+        h2 {
+          color: #141719;
+          font-size: 24px;
+          font-weight: 700;
+        }
+      }
+      .box {
+        height: 542px;
+        @include flex(row, space-between, center, nowrap);
+        gap: 30px;
+        .left-side {
+          @include flex(column, space-between, stretch, nowrap);
+          height: 542px;
+          width: 540px;
+          .parent {
+            height: 256px;
+            border-radius: 8px;
+            overflow: hidden;
+          }
+          .small-card-1,
+          .small-card-2 {
+            @include flex(column, flex-end, flex-start, nowrap);
+            height: 256px;
+            border-radius: 8px;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            padding: 40px;
+            transition: all 0.3s;
+          }
+
+          .small-card-1:hover,
+          .small-card-2:hover {
+            transform: scale(1.02);
+          }
+          .small-card-1 {
+            background-image: linear-gradient(
+                rgba(0, 0, 0, 0.3),
+                rgba(0, 0, 0, 0.3)
+              ),
+              url("/TBC-Concept/images/first.png");
+          }
+          .small-card-2 {
+            background-image: linear-gradient(
+                rgba(0, 0, 0, 0.3),
+                rgba(0, 0, 0, 0.3)
+              ),
+              url("/TBC-Concept/images/second.png");
+          }
+        }
+        .right-side {
+          height: 542px;
+          width: 540px;
+          .parent-b {
+            height: 542px;
+            border-radius: 8px;
+            overflow: hidden;
+          }
+          .big-card {
+            @include flex(column, flex-end, flex-start, nowrap);
+            height: 542px;
+            padding: 40px;
+            border-radius: 8px;
+            background-image: linear-gradient(
+                rgba(0, 0, 0, 0.3),
+                rgba(0, 0, 0, 0.3)
+              ),
+              url("/TBC-Concept/images/third.png");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            transition: all 0.3s;
+          }
+          .big-card:hover {
+            transform: scale(1.02);
+          }
+        }
+      }
+    }
+  }
+}
+
+.card-content {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  color: white;
+  a {
+    text-decoration: underline;
+    font-size: 14px;
+    svg {
+      margin-right: 4px;
+    }
+  }
+  h3 {
+    font-size: 24px;
+    font-weight: 700;
+  }
+}
+
+.sec-4 {
+  .sec-4-div {
+    height: 300px;
+    padding: 60px 0;
+    .container {
+      @extend %mycontainer;
+      height: 180px;
+      @include flex(row, space-between, flex-start, nowrap);
+      .numb-card {
+        @include flex(column, space-around, flex-start, nowrap);
+        width: 31.5%;
+        height: 180px;
+        padding: 40px 48px;
+        background-color: #fff;
+        border-radius: 8px;
+
+        .number {
+          font-size: 44px;
+          font-weight: 700;
+        }
+        p {
+          font-size: 16px;
+          color: #555f62;
+        }
+      }
+    }
+  }
+}
