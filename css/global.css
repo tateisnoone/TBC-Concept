@@ -142,9 +142,9 @@ html {
   scroll-behavior: smooth;
 }
 
-.sec-4 .sec-4-div .container, .sec-3 .sec-3-div .container, .sec-2 div, .sec-1 .banner-sec, .breadcrumbs, header .header-div {
+.sec-7 .sec-7-div .container, .sec-6 .content .container, .sec-5 .wrapper, .sec-4 .sec-4-div .container, .sec-3 .sec-3-div .container, .sec-2 div, .sec-1 .banner-sec, .breadcrumbs, header .header-div {
   max-width: 1110px;
-  width: 100%;
+  width: 90%;
   margin: 0 auto;
 }
 
@@ -170,6 +170,7 @@ header .header-div {
   z-index: 103;
   height: 100%;
   position: relative;
+  width: 100%;
 }
 header .header-div .header-menu {
   width: 480px;
@@ -194,16 +195,96 @@ header .header-div .header-buttons {
   justify-content: space-between;
   align-items: center;
   flex-wrap: nowrap;
-  width: 318px;
+  width: 310px;
+  height: 40px;
 }
 header .header-div .header-buttons button {
   border: none;
   background: none;
   cursor: pointer;
-  transition: color 0.3s;
+  transition: 0.25s ease-out;
 }
-header .header-div .header-buttons button:hover {
+header .header-div .header-buttons svg:hover path {
+  fill: #3295ce;
+}
+header .header-div .header-buttons a {
+  margin-left: 2px;
+  color: #182cc0;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.4;
+  transition: 0.25s ease-out;
+}
+header .header-div .header-buttons a:hover,
+header .header-div .header-buttons a:hover svg path {
   color: #3295ce;
+  fill: #3295ce;
+}
+header .header-div .header-buttons svg {
+  margin-right: 7px;
+  margin-top: 2px;
+}
+header .header-div .header-buttons svg path {
+  transition: 0.25s ease-out;
+}
+header .header-div .header-buttons .lang_toggle {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+  width: 68px;
+  height: 36px;
+  padding: 0 8px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: 0.25s ease-in-out;
+  position: relative;
+}
+header .header-div .header-buttons .lang_toggle:hover {
+  background-color: #eef1f1;
+}
+header .header-div .header-buttons .lang_toggle:hover svg path {
+  fill: black;
+}
+header .header-div .header-buttons .lang-icon,
+header .header-div .header-buttons .lang-text {
+  display: inline-block;
+  vertical-align: middle;
+}
+header .header-div .header-buttons .lang-list {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 68px;
+  height: 53px;
+  color: #141719;
+  background-color: #fff;
+  border: 1px solid #e1e4e5;
+  border-radius: 4px;
+  flex-direction: column;
+  padding: 8px 0;
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  box-shadow: 0 4px 6px 2px rgba(12, 43, 67, 0.05);
+  z-index: 10;
+}
+header .header-div .header-buttons .lang_toggle:hover .lang-list {
+  display: flex;
+}
+header .header-div .header-buttons .lang-dropdown {
+  width: 100%;
+  height: 100%;
+  padding-top: 8px;
+  text-align: center;
+  vertical-align: center;
+  cursor: pointer;
+  transition: 0.25s ease-in-out;
+}
+header .header-div .header-buttons .lang-dropdown:hover {
+  background-color: #eef1f1;
 }
 
 body {
@@ -272,7 +353,7 @@ body {
   background-image: linear-gradient(15deg, #001682, #3240e5, #3295ce, #3295ce);
   background-size: 400%;
   background-position: left;
-  transition: 0.25s background-position ease-in-out;
+  transition: 0.15s background-position ease-in-out;
 }
 .sec-1 .banner-sec .banner-inner button:hover {
   background-position: right;
@@ -431,4 +512,222 @@ body {
 .sec-4 .sec-4-div .container .numb-card p {
   font-size: 16px;
   color: #555f62;
+}
+
+.sec-5 {
+  height: 610px;
+  padding: 60px 0;
+}
+.sec-5 .wrapper {
+  min-height: 405px;
+  border: 1px solid white;
+  display: flex;
+  overflow-x: auto;
+  overflow-y: hidden;
+  gap: 5px;
+  scrollbar-width: thin;
+  scrollbar-color: #007bff #f1f1f1;
+  cursor: grab;
+}
+.sec-5 .wrapper .item {
+  min-width: 33%;
+  height: 406;
+  line-height: 110px;
+  text-align: center;
+  background-color: #ddd;
+  border-radius: 8px;
+  width: 415px;
+}
+.sec-5 .wrapper::-webkit-scrollbar {
+  height: 8px;
+}
+.sec-5 .wrapper::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+.sec-5 .wrapper::-webkit-scrollbar-thumb {
+  background: #007bff;
+  border-radius: 4px;
+}
+.sec-5 .wrapper::-webkit-scrollbar-thumb:hover {
+  background: #0056b3;
+}
+
+.sec-6 {
+  height: 534px;
+  padding: 60px 0;
+}
+.sec-6 .content {
+  background-color: #fff;
+  height: 414px;
+  padding: 0 47px;
+}
+.sec-6 .content .container .digital-bank {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: nowrap;
+  height: 414px;
+  padding: 32px 0;
+}
+.sec-6 .content .container .digital-bank .leftside {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: nowrap;
+  width: 55%;
+  height: 221px;
+}
+.sec-6 .content .container .digital-bank .leftside h2 {
+  color: #141719;
+  font-size: 24px;
+  font-weight: 700;
+}
+.sec-6 .content .container .digital-bank .leftside p {
+  color: #555f62;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.7;
+}
+.sec-6 .content .container .digital-bank .leftside .app-buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+  width: 284px;
+  height: 51px;
+  padding-top: 8px;
+}
+.sec-6 .content .container .digital-bank .leftside .app-buttons a {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  width: 134px;
+  height: 51px;
+  color: #fff;
+  border: 1px solid #e1e4e5;
+  border-radius: 4px;
+  padding: 16px 32px;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1.33;
+  transition: 0.25s ease-in-out;
+}
+.sec-6 .content .container .digital-bank .leftside .app-buttons a:hover {
+  background-color: #f9fafa;
+}
+.sec-6 .content .container .digital-bank .right-side {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  flex-wrap: nowrap;
+  width: 45%;
+  height: 414px;
+}
+.sec-6 .content .container .digital-bank .right-side img {
+  width: 290px;
+  max-height: 90%;
+  vertical-align: middle;
+}
+
+.sec-7 {
+  height: 627px;
+  padding: 60px 0;
+}
+.sec-7 .sec-7-div {
+  height: 507px;
+  padding: 0 47px;
+}
+.sec-7 .sec-7-div .container {
+  height: 507px;
+}
+.sec-7 .sec-7-div .container .heading-wrapper {
+  height: 36px;
+  margin-bottom: 36px;
+}
+.sec-7 .sec-7-div .container .heading-wrapper h2 {
+  color: #141719;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.5;
+}
+.sec-7 .sec-7-div .container .card-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+  height: 446px;
+  padding-bottom: 38px;
+}
+.sec-7 .sec-7-div .container .card-content .card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+  width: 31.5%;
+  height: 408px;
+  border: 1px solid #e1e4e5;
+  border-radius: 8px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: box-shadow 0.4s ease-in-out, background-color 0.4s ease-in-out;
+}
+.sec-7 .sec-7-div .container .card-content .card .img-div {
+  width: 100%;
+  height: 212px;
+  position: relative;
+  overflow: hidden;
+}
+.sec-7 .sec-7-div .container .card-content .card .img-div img {
+  width: 348px;
+  height: 102%;
+  -o-object-fit: cover;
+  object-fit: cover;
+  position: absolute;
+  transition: all 0.25s ease-in-out;
+}
+.sec-7 .sec-7-div .container .card-content .card .card-description {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: nowrap;
+  width: 100%;
+  height: 197px;
+  padding: 28px;
+  overflow: hidden;
+}
+.sec-7 .sec-7-div .container .card-content .card .card-description h3 {
+  color: #141719;
+  font-size: 16px;
+  font-weight: 700;
+}
+.sec-7 .sec-7-div .container .card-content .card .card-description p {
+  height: 95px;
+  color: #555f62;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.7;
+  overflow: hidden;
+}
+.sec-7 .sec-7-div .container .card-content .card .card-description strong {
+  font-weight: 700;
+}
+.sec-7 .sec-7-div .container .card-content .card:hover {
+  background-color: #fff;
+  box-shadow: 0 36px 40px -15px rgba(12, 43, 67, 0.07);
+}
+.sec-7 .sec-7-div .container .card-content [data-animation=img-up]:hover img {
+  top: -2%;
+}
+
+.sec-8 .banner-sec {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("/TBC-Concept/images/womaninoffice.png");
 }/*# sourceMappingURL=global.css.map */
