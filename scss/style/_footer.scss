@@ -3,14 +3,18 @@
   padding-top: 60px;
   background-color: #fff;
   @media (max-width: 767px) {
-    height: 1108px;
-    padding: 40px 0 0;
+    height: 970px;
+    padding: 0;
   }
   .container {
     @extend %mycontainer;
     height: 552.98px;
     @media (max-width: 767px) {
-      height: 1108px;
+      height: 700px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 100%;
     }
     .footer-top {
       height: 131px;
@@ -23,44 +27,75 @@
         @include flex(row, space-between, center, nowrap);
         height: 36px;
         @extend %language-toggler;
+        @media (max-width: 767px) {
+          padding: 0 45px;
+        }
         svg {
           margin: 2px 7px 0 0;
+        }
+        .tbc-logo {
+          display: none;
+          @media (max-width: 767px) {
+            display: inline;
+          }
+        }
+        .concept-logo {
+          @media (max-width: 767px) {
+            display: none;
+          }
         }
         @media (max-width: 767px) {
           height: 47px;
         }
       }
     }
-
     .footer-main {
       height: 332.98px;
       padding-bottom: 45px;
       .footer-main-inner {
         @include flex(row, space-between, center, nowrap);
         height: 100%;
-
+        @media (max-width: 767px) {
+          @include flex(column, space-between, center, nowrap);
+          height: 400px;
+          margin-top: -150px;
+        }
         .footer-col {
           height: 100%;
           width: 24%;
+          @media (max-width: 767px) {
+            width: 100%;
+            height: 108px;
+            padding: 36px 45px;
+            font-size: 24px;
+            line-height: 1.5;
+            border-top: 0.2px solid #929393;
+            border-bottom: 0.2px solid #929393;
+          }
+
           .footer-dropdown {
             .footer-dropdown-toggle {
               @include flex(column, space-between, flex-start, nowrap);
               height: 51.2px;
               padding-bottom: 24px;
               @media (max-width: 767px) {
-                width: 100%;
-                height: 108px;
-                padding: 36px 45px;
-                font-size: 24px;
-                line-height: 1.5;
+                @include flex(row, space-between, flex-start, nowrap);
+                height: 180px;
               }
               .main-link {
                 font-size: 16px;
                 color: #141719;
                 font-weight: 700;
+                @media (max-width: 767px) {
+                  font-size: 24px;
+                }
               }
               svg {
                 display: none;
+
+                @media (max-width: 767px) {
+                  display: flex;
+                }
               }
             }
             nav {
@@ -68,6 +103,9 @@
               height: 74.4px;
               a {
                 color: #555f62;
+              }
+              @media (max-width: 767px) {
+                display: none;
               }
             }
           }
@@ -80,6 +118,9 @@
             @include flex(column, space-between, flex-start, nowrap);
             height: 114px;
             margin: 32px 0;
+            @media (max-width: 767px) {
+              height: 140px;
+            }
             .footer_contact-item {
               @include flex(row, space-between, center, nowrap);
               gap: 5px;
@@ -108,6 +149,14 @@
             }
           }
         }
+        .bottom-col {
+          @media (max-width: 767px) {
+            width: 100%;
+            height: 469px;
+            padding: 56px 45px;
+            border: none;
+          }
+        }
       }
     }
   }
@@ -116,10 +165,17 @@
     height: 89px;
     padding: 28px 0;
     color: #555f62;
+    background-color: #f9fafa;
+    @media (max-width: 767px) {
+      height: 152.8px;
+      margin-bottom: -200px;
+    }
     .footer-bottom-inner {
       @include flex(row, space-between, center, nowrap);
       height: 100%;
-
+      @media (max-width: 767px) {
+        padding: 0 45px;
+      }
       .footer-bottom-logo-wrapper {
         @include flex(row, space-between, center, nowrap);
         width: 217px;

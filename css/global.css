@@ -1299,8 +1299,8 @@ body {
 }
 @media (max-width: 767px) {
   .footer {
-    height: 1108px;
-    padding: 40px 0 0;
+    height: 970px;
+    padding: 0;
   }
 }
 .footer .container {
@@ -1308,7 +1308,11 @@ body {
 }
 @media (max-width: 767px) {
   .footer .container {
-    height: 1108px;
+    height: 700px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
   }
 }
 .footer .container .footer-top {
@@ -1329,8 +1333,26 @@ body {
   flex-wrap: nowrap;
   height: 36px;
 }
+@media (max-width: 767px) {
+  .footer .container .footer-top .footer-top-inner {
+    padding: 0 45px;
+  }
+}
 .footer .container .footer-top .footer-top-inner svg {
   margin: 2px 7px 0 0;
+}
+.footer .container .footer-top .footer-top-inner .tbc-logo {
+  display: none;
+}
+@media (max-width: 767px) {
+  .footer .container .footer-top .footer-top-inner .tbc-logo {
+    display: inline;
+  }
+}
+@media (max-width: 767px) {
+  .footer .container .footer-top .footer-top-inner .concept-logo {
+    display: none;
+  }
 }
 @media (max-width: 767px) {
   .footer .container .footer-top .footer-top-inner {
@@ -1349,9 +1371,31 @@ body {
   flex-wrap: nowrap;
   height: 100%;
 }
+@media (max-width: 767px) {
+  .footer .container .footer-main .footer-main-inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+    height: 400px;
+    margin-top: -150px;
+  }
+}
 .footer .container .footer-main .footer-main-inner .footer-col {
   height: 100%;
   width: 24%;
+}
+@media (max-width: 767px) {
+  .footer .container .footer-main .footer-main-inner .footer-col {
+    width: 100%;
+    height: 108px;
+    padding: 36px 45px;
+    font-size: 24px;
+    line-height: 1.5;
+    border-top: 0.2px solid #929393;
+    border-bottom: 0.2px solid #929393;
+  }
 }
 .footer .container .footer-main .footer-main-inner .footer-col .footer-dropdown .footer-dropdown-toggle {
   display: flex;
@@ -1364,11 +1408,12 @@ body {
 }
 @media (max-width: 767px) {
   .footer .container .footer-main .footer-main-inner .footer-col .footer-dropdown .footer-dropdown-toggle {
-    width: 100%;
-    height: 108px;
-    padding: 36px 45px;
-    font-size: 24px;
-    line-height: 1.5;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: nowrap;
+    height: 180px;
   }
 }
 .footer .container .footer-main .footer-main-inner .footer-col .footer-dropdown .footer-dropdown-toggle .main-link {
@@ -1376,8 +1421,18 @@ body {
   color: #141719;
   font-weight: 700;
 }
+@media (max-width: 767px) {
+  .footer .container .footer-main .footer-main-inner .footer-col .footer-dropdown .footer-dropdown-toggle .main-link {
+    font-size: 24px;
+  }
+}
 .footer .container .footer-main .footer-main-inner .footer-col .footer-dropdown .footer-dropdown-toggle svg {
   display: none;
+}
+@media (max-width: 767px) {
+  .footer .container .footer-main .footer-main-inner .footer-col .footer-dropdown .footer-dropdown-toggle svg {
+    display: flex;
+  }
 }
 .footer .container .footer-main .footer-main-inner .footer-col .footer-dropdown nav {
   display: flex;
@@ -1389,6 +1444,11 @@ body {
 }
 .footer .container .footer-main .footer-main-inner .footer-col .footer-dropdown nav a {
   color: #555f62;
+}
+@media (max-width: 767px) {
+  .footer .container .footer-main .footer-main-inner .footer-col .footer-dropdown nav {
+    display: none;
+  }
 }
 .footer .container .footer-main .footer-main-inner .footer-col .footer_heading {
   color: #141719;
@@ -1403,6 +1463,11 @@ body {
   flex-wrap: nowrap;
   height: 114px;
   margin: 32px 0;
+}
+@media (max-width: 767px) {
+  .footer .container .footer-main .footer-main-inner .footer-col .footer_contact-list {
+    height: 140px;
+  }
 }
 .footer .container .footer-main .footer-main-inner .footer-col .footer_contact-list .footer_contact-item {
   display: flex;
@@ -1440,10 +1505,25 @@ body {
   color: #182cc0;
   background-color: #eee;
 }
+@media (max-width: 767px) {
+  .footer .container .footer-main .footer-main-inner .bottom-col {
+    width: 100%;
+    height: 469px;
+    padding: 56px 45px;
+    border: none;
+  }
+}
 .footer .footer-bottom {
   height: 89px;
   padding: 28px 0;
   color: #555f62;
+  background-color: #f9fafa;
+}
+@media (max-width: 767px) {
+  .footer .footer-bottom {
+    height: 152.8px;
+    margin-bottom: -200px;
+  }
 }
 .footer .footer-bottom .footer-bottom-inner {
   display: flex;
@@ -1452,6 +1532,11 @@ body {
   align-items: center;
   flex-wrap: nowrap;
   height: 100%;
+}
+@media (max-width: 767px) {
+  .footer .footer-bottom .footer-bottom-inner {
+    padding: 0 45px;
+  }
 }
 .footer .footer-bottom .footer-bottom-inner .footer-bottom-logo-wrapper {
   display: flex;
