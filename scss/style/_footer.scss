@@ -58,7 +58,7 @@
         @media (max-width: 767px) {
           @include flex(column, space-between, center, nowrap);
           height: 400px;
-          margin-top: -150px;
+          margin-top: -247px;
         }
         .footer-col {
           height: 100%;
@@ -168,7 +168,7 @@
     background-color: #f9fafa;
     @media (max-width: 767px) {
       height: 152.8px;
-      margin-bottom: -200px;
+      margin-bottom: -400px;
     }
     .footer-bottom-inner {
       @include flex(row, space-between, center, nowrap);
