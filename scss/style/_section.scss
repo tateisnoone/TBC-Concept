@@ -26,10 +26,18 @@ body {
     border-radius: 6px;
     color: white;
     padding: 95px;
+    @media (max-width: 991px) {
+      height: 450px;
+      padding: 240px 45px 36px;
+    }
+    @media (max-width: 767px) {
+      width: 100%;
+    }
     .banner-inner {
       @include flex(column, space-between, flex-start, nowrap);
       max-width: 540px;
       height: 186px;
+
       h1 {
         font-size: 28px;
         line-height: 1.5;
@@ -69,6 +77,30 @@ body {
       button:hover {
         background-position: right;
       }
+      @media (max-width: 767px) {
+        max-width: 100%;
+        height: 150px;
+        align-items: stretch;
+        h1 {
+          font-size: 24px;
+        }
+        p {
+          font-size: 14px;
+        }
+        button {
+          width: 100%;
+        }
+      }
+    }
+  }
+  @media (max-width: 767px) {
+    max-width: 100%;
+    align-items: stretch;
+    h1 {
+      font-size: 24px;
+    }
+    p {
+      font-size: 14px;
     }
   }
 }
@@ -76,13 +108,28 @@ body {
 .sec-2 {
   div {
     @extend %mycontainer;
+    display: flex;
+    align-items: center;
     height: 228px;
     padding: 60px 0;
+    @media (max-width: 1064px) {
+      height: 264px;
+    }
+    @media (max-width: 590px) {
+      padding: 40px 0;
+    }
+
     p {
       font-size: 36px;
       color: #141719;
       font-weight: 400;
       line-height: 1.5;
+      @media (max-width: 767px) {
+        font-size: 28px;
+      }
+      @media (max-width: 479px) {
+        font-size: 24px;
+      }
     }
   }
 }
@@ -202,10 +249,19 @@ body {
   .sec-4-div {
     height: 300px;
     padding: 60px 0;
+    @media (max-width: 991px) {
+      height: 701px;
+      padding: 0;
+    }
     .container {
       @extend %mycontainer;
-      height: 180px;
       @include flex(row, space-between, flex-start, nowrap);
+      height: 180px;
+      @media (max-width: 991px) {
+        @include flex(column, space-between, flex-start, nowrap);
+        height: 601px;
+      }
+
       .numb-card {
         @include flex(column, space-around, flex-start, nowrap);
         width: 31.5%;
@@ -213,7 +269,9 @@ body {
         padding: 40px 48px;
         background-color: #fff;
         border-radius: 8px;
-
+        @media (max-width: 991px) {
+          width: 100%;
+        }
         .number {
           font-size: 44px;
           font-weight: 700;
@@ -228,72 +286,261 @@ body {
 }
 
 //section 5
+.section4_slide1 {
+  @extend %mycontainer;
+  position: relative;
+}
 
-.sec-5 {
-  height: 610px;
-  padding: 60px 0;
-  .wrapper {
-    @extend %mycontainer;
-    min-height: 405px;
-    border: 1px solid white;
-    display: flex;
-    overflow-x: auto;
-    overflow-y: hidden;
-    gap: 5px;
-    scrollbar-width: thin;
-    scrollbar-color: #007bff #f1f1f1;
-    cursor: -webkit-grab;
-    cursor: grab;
-    .item {
-      min-width: 33%;
-      height: 406;
-      line-height: 110px;
-      text-align: center;
-      background-color: #ddd;
-      border-radius: 8px;
-      width: 415px;
-    }
-  }
-  .wrapper::-webkit-scrollbar {
-    height: 8px;
-  }
+.wrapper {
+  padding-bottom: 36px;
+  min-height: 391px;
+  border: 1px solid white;
+  display: flex;
+  overflow-x: auto; /* Enable horizontal scrolling */
+  overflow-y: hidden; /* Disable vertical scrolling */
+  gap: 30px;
+}
 
-  .wrapper::-webkit-scrollbar-track {
-    background: #f1f1f1;
-  }
+.wrapper::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
 
-  .wrapper::-webkit-scrollbar-thumb {
-    background: #007bff;
-    border-radius: 4px;
-  }
+.wrapper::-webkit-scrollbar-thumb {
+  background: #007bff;
+  border-radius: 4px;
+}
 
-  .wrapper::-webkit-scrollbar-thumb:hover {
-    background: #0056b3;
-  }
+.wrapper::-webkit-scrollbar-thumb:hover {
+  background: #0056b3;
+}
+.wrapper::-webkit-scrollbar {
+  width: 10%;
+  height: 2px;
+}
+
+.wrapper::-webkit-scrollbar-track {
+  background-color: #f1f1f1;
+  width: 100px;
+}
+
+.wrapper::-webkit-scrollbar-thumb {
+  background: linear-gradient(#182cc0, #182cc0);
+}
+
+#scroll-left {
+  background-color: #f9fafa;
+  border: none;
+  font-size: 23px;
+  color: #182cc0;
+}
+
+#scroll-right {
+  background-color: #f9fafa;
+  border: none;
+  font-size: 23px;
+  color: #182cc0;
+  font-weight: 900;
+  cursor: pointer;
+}
+.scroll-buttons {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.wrapper .item {
+  min-width: 438.5px;
+  height: 420px;
+  text-align: center;
+}
+
+.item {
+  border-radius: 8px;
+  width: 30%;
+  height: 391px;
+  border: 1px solid #e1e4e5;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  justify-content: flex-start;
+  align-items: self-start;
+  background: fixed;
+}
+
+.item:hover {
+  background-color: #fff;
+  box-shadow: 0 36px 40px -15px rgba(12, 43, 67, 0.07);
+  transition-duration: 0.5s;
+
+  transform: scale(1.01);
+}
+
+.slide_title1 {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.slide1_a {
+  font-size: 14px;
+  color: #182cc0;
+}
+
+.slide1_a:hover {
+  color: #3295ce;
+  transition-duration: 0.5s;
+}
+
+.item_img1 {
+  position: relative;
+  width: 100%;
+  height: 212px;
+  background-image: url(../../../TBC-Concept/images/iveria.jpg);
+}
+.image_item1 {
+  position: absolute;
+  top: 16px;
+  right: 0;
+  width: 78px;
+  height: 56px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 6px 0 0 6px;
+  overflow: hidden;
+}
+.shared-img-div {
+  position: relative;
+  width: 100%;
+  height: 256px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.item_img2 {
+  background-image: url(../../../TBC-Concept/images/tegeramotors.png);
+}
+
+.item_img3 {
+  background-image: url(../../../TBC-Concept/images/batumi.png);
+}
+
+.item_img4 {
+  background-image: url(../../../TBC-Concept/images/meriden.png);
+}
+
+.item_img5 {
+  background-image: url(../../../TBC-Concept/images/colosseum.png);
+}
+
+.item_text2 {
+  height: 130px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 30px;
+  align-items: flex-start;
+  gap: 16px;
+  /* margin-top: 18px; */
+}
+
+.slide_title1 {
+  margin-bottom: 36px;
+  font-size: 24px;
+  color: black;
+  font-weight: 700;
+}
+
+.item_p2 {
+  color: #6f787b;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.item_h3 {
+  color: black;
+  font-size: 16px;
+  text-align: left;
+  font-weight: 700;
 }
 
 //section 6
 .sec-6 {
   height: 534px;
   padding: 60px 0;
+  @media (max-width: 991px) {
+    height: 400px;
+    padding: 50px 0;
+  }
+  @media (max-width: 767px) {
+    height: 840px;
+    padding: 40px 0;
+  }
   .content {
     background-color: #fff;
     height: 414px;
     padding: 0 47px;
+    @media (max-width: 991px) {
+      height: 414px;
+      padding: 40px 0;
+    }
+    @media (max-width: 767px) {
+      height: 788px;
+      padding: 45px 0;
+    }
     .container {
       @extend %mycontainer;
       .digital-bank {
         @include flex(row, flex-start, center, nowrap);
         height: 414px;
         padding: 32px 0;
+        @media (max-width: 991px) {
+          @include flex(row, space-between, center, nowrap);
+          height: 300px;
+          padding: 32px 0;
+        }
+        @media (max-width: 767px) {
+          @include flex(column, space-between, center, nowrap);
+          height: 675.5px;
+          padding: 0;
+        }
         .leftside {
           @include flex(column, space-between, flex-start, nowrap);
           width: 55%;
           height: 221px;
+          @media (max-width: 991px) {
+            width: 65%;
+            height: 191px;
+            margin-right: 10px;
+          }
+          @media (max-width: 767px) {
+            @include flex(column, space-between, center, nowrap);
+            height: 675.5px;
+            padding: 0;
+            width: 100%;
+          }
+          .application-pic {
+            display: none;
+            @media (max-width: 767px) {
+              display: flex;
+              width: 370px;
+              height: 482px;
+              margin-right: 10px;
+            }
+            @media (max-width: 370px) {
+              width: 100%;
+              height: 450px;
+            }
+          }
           h2 {
             color: #141719;
             font-size: 24px;
             font-weight: 700;
+            @media (max-width: 767px) {
+              align-self: flex-start;
+            }
           }
           p {
             color: #555f62;
@@ -306,6 +553,15 @@ body {
             width: 284px;
             height: 51px;
             padding-top: 8px;
+            @media (max-width: 767px) {
+              width: 100%;
+            }
+
+            .app-stores {
+              @media (max-width: 991px) {
+                display: none;
+              }
+            }
             a {
               @include flex(row, center, center, nowrap);
               width: 134px;
@@ -322,16 +578,54 @@ body {
             a:hover {
               background-color: #f9fafa;
             }
+            .download-button {
+              @include flex(row, center, center, nowrap);
+              width: 160px;
+              height: 52px;
+              gap: 10px;
+              background-color: #f9fafa;
+              color: #182cc0;
+              text-transform: uppercase;
+              border: 1px solid #182cc0;
+              border-radius: 4px;
+              padding: 16px 32px;
+              font-family: "Montserrat", sans-serif;
+              font-size: 12px;
+              font-weight: 700;
+              line-height: 1.33;
+              transition: background-position 0.25s ease-in-out;
+            }
+            .download-button {
+              display: none;
+              @media (max-width: 991px) {
+                display: flex;
+              }
+              @media (max-width: 767px) {
+                width: 100%;
+              }
+            }
           }
         }
         .right-side {
           @include flex(row, flex-end, center, nowrap);
           width: 45%;
           height: 414px;
-          img {
-            width: 290px;
-            max-height: 90%;
-            vertical-align: middle;
+          @media (max-width: 991px) {
+            width: 23%;
+            height: 270px;
+            margin-right: 20px;
+          }
+          @media (max-width: 767px) {
+            display: none;
+          }
+        }
+        img {
+          width: 290px;
+          max-height: 90%;
+          vertical-align: middle;
+          @media (max-width: 991px) {
+            width: 190px;
+            max-height: 100%;
           }
         }
       }
@@ -434,4 +728,146 @@ body {
     background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
       url("/TBC-Concept/images/womaninoffice.png");
   }
+}
+//section 9
+
+.section4_slide1 {
+  @extend %mycontainer;
+
+  position: relative; /* Required for custom scrollbar */
+}
+
+.awards {
+  padding-bottom: 36px;
+  min-height: 270px;
+  border: 1px solid white;
+  display: flex;
+  overflow-x: auto; /* Enable horizontal scrolling */
+  overflow-y: hidden; /* Disable vertical scrolling */
+  gap: 39px;
+}
+
+.awards::-webkit-scrollbar {
+  width: 10%;
+  height: 2px;
+}
+
+.awards::-webkit-scrollbar-track {
+  background-color: #f1f1f1;
+  width: 10px;
+}
+
+.awards::-webkit-scrollbar-thumb {
+  background: linear-gradient(#182cc0, #182cc0);
+}
+
+#scroll-left {
+  background-color: #f9fafa;
+  border: none;
+  font-size: 23px;
+  color: #182cc0;
+  cursor: pointer;
+}
+
+#scroll-right {
+  background-color: #f9fafa;
+  border: none;
+  font-size: 23px;
+  color: #182cc0;
+  font-weight: 900;
+  cursor: pointer;
+}
+.scroll-buttons {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.awards .award_card {
+  min-width: 420px;
+  height: 270px;
+  background-color: white;
+}
+
+.award_card {
+  @include flex(column, space-between, flex-start, nowrap);
+  padding: 28px;
+  border-radius: 8px;
+  border: 1px solid #e1e4e5;
+  overflow: hidden;
+  gap: 20px;
+}
+
+.award_card:hover {
+  background-color: #fff;
+  box-shadow: 0 36px 40px -15px rgba(12, 43, 67, 0.07);
+  transition-duration: 0.5s;
+
+  transform: scale(1.01);
+}
+
+.slide_title1 {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.slide1_a {
+  font-size: 14px;
+  color: #182cc0;
+}
+
+.slide1_a:hover {
+  color: #3295ce;
+  transition-duration: 0.5s;
+}
+
+.image_item1 {
+  position: absolute;
+  top: 16px;
+  right: 0;
+  width: 78px;
+  height: 56px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 6px 0 0 6px;
+  overflow: hidden;
+}
+
+.item_img_award {
+  position: relative;
+  width: 50%;
+  height: 70px;
+  background-size: cover;
+}
+
+.awards_text2 {
+  height: 130px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.slide_title1 {
+  margin-bottom: 36px;
+  font-size: 24px;
+  color: black;
+  font-weight: 700;
+}
+
+.awards_p2 {
+  color: #555f62;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.awards_h3 {
+  color: black;
+  font-size: 18px;
+  line-height: 30px;
+  font-weight: 700;
 }
